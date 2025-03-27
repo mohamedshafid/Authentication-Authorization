@@ -70,7 +70,7 @@ export const generateMagicLink = async (email) => {
     expiresIn: "1h",
   });
 
-  const link = `http://localhost:3000/api/v1/auth/verifyMagicLink/?token=${token}`;
+  const link = `https://authentication-tcql.onrender.com/api/v1/auth/verifyMagicLink/?token=${token}`;
   return link;
 };
 

@@ -18,7 +18,12 @@ import MongoStore from "connect-mongo";
 const app = express();
 
 // DEFAULT MIDDLEWARES.
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://authentication-tcql.onrender.com",
+    credentials: true,
+  })
+);
 app.use(bodyParser.json());
 app.use(cookieParser());
 app.use(

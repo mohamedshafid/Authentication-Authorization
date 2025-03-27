@@ -12,7 +12,6 @@ import {
   sendResetEmail,
   sendVerificationEmail,
 } from "../utils/user.util.js";
-
 // SIGNUP CONTROLLER.
 export const signUp = async (req, res) => {
   const { name, email, password } = req.body;
@@ -175,7 +174,7 @@ export const resetPassword = async (req, res) => {
     const resetTokenExpires = Date.now() + 3600000; // 1 HOUR.
 
     // SENDING RESET EMAIL.
-    const url = `http://localhost:3000/api/v1/auth/reset-password/${resetToken}`;
+    const url = `https://authentication-tcql.onrender.com/api/v1/auth/reset-password/${resetToken}`;
     await sendResetEmail(email, url);
 
     // UPDATING THE USER.
