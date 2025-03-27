@@ -24,6 +24,7 @@ app.use(
     credentials: true,
   })
 );
+
 app.use(bodyParser.json());
 app.use(cookieParser());
 app.use(

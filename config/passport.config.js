@@ -13,7 +13,7 @@ passport.use(
     {
       clientID: process.env.GOOGLE_CLIENT_ID,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-      callbackURL: "/api/v1/auth/google/callback",
+      callbackURL: "https://authentication-tcql.onrender.com/api/v1/auth/google/callback",
       passReqToCallback: true,
     },
     async (request, accessToken, refreshToken, profile, done) => {
@@ -42,7 +42,8 @@ passport.use(
     {
       clientID: process.env.GITHUB_CLIENT_ID,
       clientSecret: process.env.GITHUB_CLIENT_SECRET,
-      callbackURL: "/api/v1/auth/github/callback",
+      callbackURL: "https://authentication-tcql.onrender.com/api/v1/auth/github/callback",
+      passReqToCallback: true,
     },
     async (accessToken, refreshToken, profile, done) => {
       try {
